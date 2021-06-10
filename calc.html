@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0 0;
+			padding: 0px;
+			font-family: 'Segoe UI';
+			background: linear-gradient(rgb(227,222,17), rgb(104,227,45));
+			background-repeat: no-repeat;
+			background-size: auto 100vh;
+		}
+		#box{
+			position: absolute;
+			margin: 26vh 33.9vw;
+		}
+		#input{
+			height: 40px;
+			width: 322px;
+			background: rgba(255, 255, 255, 0.2);
+			border: none;
+			color: white;
+			text-align: right;
+			padding-right: 25px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.first{
+			position: absolute;
+			margin: 34vh 30vw;
+		}
+		.second{
+			position: absolute;
+			margin: 46vh 30vw;
+		}
+		.third{
+			position: absolute;
+			margin: 58vh 30vw;
+		}
+		.fourth{
+			position: absolute;
+			margin: 70vh 30vw;
+		}
+		li{
+			display: inline-block;
+			margin-left: 10px;
+		}
+		button{
+			border: none;
+			width: 80px;
+			padding: 20px ;
+			background: rgba(255, 255, 255, 0.2);
+			color: white;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div id='box'>
+		<input type="text" name="" value='' id='input'>
+	</div>
+	<div>
+		<ul class='first'>
+			<li><button onclick="press1()">1</button>
+			<li><button onclick="press2()">2</button>
+			<li><button onclick="press3()">3</button>
+			<li><button onclick="pressC()">C</button>
+		</ul>
+		<ul class='second'>
+			<li><button onclick="press4()">4</button>
+			<li><button onclick="press5()">5</button>
+			<li><button onclick="press6()">6</button>
+			<li><button onclick="pressp()">+</button>
+		</ul>
+		<ul class='third'>
+			<li><button onclick="press7()">7</button>
+			<li><button onclick="press8()">8</button>
+			<li><button onclick="press9()">9</button>
+			<li><button onclick="pressm()">-</button>
+		</ul>
+		<ul class='fourth'>
+			<li><button onclick="pressd()">/</button>
+			<li><button onclick="press0()">0</button>
+			<li><button onclick="pressmul()">X</button>
+			<li><button onclick="pressr()">=</button>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src='calc.js'></script>
+</body>
+</html>
