@@ -87,11 +87,11 @@ function pressr(){
 }
 
 function checker(str, press){
-	if((str[str.length - 1] = '+') || (str[str.length - 1] = '-') || (str[str.length - 1] = '/') || (str[str.length - 1] = '*')){
+	if((str[str.length - 1] == '+') || (str[str.length - 1] == '-') || (str[str.length - 1] == '/') || (str[str.length - 1] == '*')){
 		var new_value = str.slice(0, str.length - 1) + press
 		return new_value
 	}
 	else{
-		return str
+		return str + press
 	}
 }
