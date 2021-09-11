@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pomodoro</title>
+
+	<!-- Bootstrap cdn link -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+
+	<!-- Font Awesome cdn link -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="text-center title py-2">POMODORO TIMER</div>
+
+	<div class="timer text-center m-4 p-3">
+		<span class="message">Work Mode</span><br>
+		<span class="minutes"></span> : <span class="seconds"></span><br>
+		<button class="btn btn-success btn-outline-light start" onclick="start_timer()">Start</button>
+		<button class="btn btn-danger btn-outline-light stop" disabled="true" onclick="stop_timer()">Stop</button>
+		<button class="btn grey btn-outline-light reset" onclick="reset_timer()">Reset</button>
+	</div>
+
+	<div class="set-timer mx-5 mt-5 p-2">
+		<label for="work" class="mt-5 mb-3">Minutes for Working</label>
+		<input type="text" name="work" id="work" >
+		<label for="relax" class="mt-5 mb-3">Minutes for Relaxing</label>
+		<input type="text" name="relax" id="relax">
+		<button class="btn btn-danger btn-outline-light mt-5 set" type="submit" onclick="set_timer_func()">Set Timer</button>
+	</div>
+		
+
+	<footer>
+		<div>
+			Choose a background:
+			<button class="mountain btn btn-outline-light btn-sm" onclick="changeBack('mount')">Mountains</button>
+			<button class="snow btn btn-outline-light btn-sm" onclick="changeBack('snow')">Snow</button>
+			<button class="beach btn btn-outline-light btn-sm" onclick="changeBack('beach')">Beach</button>
+			<button class="sky btn btn-outline-light btn-sm" onclick="changeBack('night-sky')">Night Sky</button>
+			<button class="river btn btn-outline-light btn-sm" onclick="changeBack('river')">River</button>
+			<label for="music" class="aud-icon"><i class="fas fa-volume-mute"></i></i></label>
+			<input class="music" id ="music" type='checkbox'>
+			</div>
+	</footer>
+
+	<!-- Howler for music objects -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.js" integrity="sha512-dMiBqqEV5i3KqpAdsgQSSZ72DnNib7otY0X+b/Tnn1EmLym1dxuZ19csdZqBnfDniKd9bmNtzStQzuMrIa5Ngw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
