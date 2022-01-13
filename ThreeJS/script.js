@@ -1,8 +1,7 @@
 // document.write("Hello, world from JS!");
 
 import * as THREE from './node_modules/three/build/three.module.js';
-import * as dat from './node_modules/dat.gui/build/dat.gui.module.js';
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from './controls/OrbitControls.js';
 import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js'
 
 var scene, renderer, camera;
@@ -69,10 +68,6 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
-
-// console.log(dat);
-
-
 
 
 
