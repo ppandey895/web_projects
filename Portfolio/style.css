@@ -1,0 +1,243 @@
+:root {
+	--blue: #004C74;
+	--lgreen: #56F94D;
+	--dgreen: #88AE7E;
+	--cream: #DEF8D6;
+}
+
+html {
+	font-size: 18px;
+}
+
+* {
+	color: var(--cream);
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: var(--cream);
+	font-family: 'Oxygen', sans-serif;
+	overflow: scroll;
+}
+
+a {
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--cream);
+}
+
+.button {
+	padding: 8px;
+	border-radius: 6px;
+	transition: all .5s;
+}
+
+.button:hover{
+	transform: translate(-3px, -3px);
+	box-shadow: 4px 4px 0 var(--cream), 8px 8px 0 rgba(255, 255,255, 0.5);
+}
+
+.container > .nav {
+	position: fixed;
+	z-index: 3;
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--blue);
+}
+
+.nav > a {
+	font-size: 1.1rem;
+	background-color: rgba(0,0,0,0.05);
+}
+
+.container > .content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.container > .content > .circle {
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 600px;
+	background-color: var(--lgreen);
+	border-radius: 50%;
+	top: -300px;
+	transform-origin: center;
+	transform: scale(1, 2);
+	margin-bottom: 100px;
+}
+
+.content > header {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.content > header > img {
+	filter: brightness(1.3) contrast(120%);
+	width: 330px;
+	height: 300px;
+	border: 8px solid var(--cream);
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+.content > header > h2 {
+	position: relative;
+}
+.content > header > h1 {
+	margin-top: -10px;
+	padding: 5px;
+
+}
+
+.content > header > h2::after {
+	content: " ";
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	width: 0;
+	height: 2px;
+	background-color: var(--cream);
+	animation: underLine 3s infinite;
+}
+
+@keyframes underLine {
+	0% {width: 0;}
+	50% {width: 180px;}
+	100% {width: 0;}
+}
+
+.content > #skills {
+	margin: 100px auto 0;
+	width: 80%;
+	background-color: var(--dgreen);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px 0;
+}
+
+#skills > .skill-set {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#skills > .skill-set > div {
+	margin-bottom: 25px;
+	width: 220px;
+	border: 4px solid var(--lgreen);
+	border-radius: 40px;
+	color: var(--cream);
+	font-weight: bolder;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#skills > .skill-set > div.skill-1 {
+	background: linear-gradient(to right, var(--blue) 70%, var(--lgreen) 30%);
+}
+
+#skills > .skill-set > div.skill-2 {
+	background: linear-gradient(to right, var(--blue) 50%, var(--lgreen) 50%);
+}
+
+#skills > .skill-set > div.skill-3 {
+	background: linear-gradient(to right, var(--blue) 65%, var(--lgreen) 35%);
+}
+
+.content > #projects {
+	margin: 5px auto;
+	width: 100%;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.content > #projects > a {
+	display: flex;
+	flex-direction: column;
+}
+
+#projects > h1 {
+	color: var(--dgreen);
+}
+
+#projects > a {
+	color: var(--blue);
+}
+
+#footer {
+	width: 100%;
+	height: 100px;
+	background: var(--blue);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	padding: 20px 0;
+}
+
+#footer > div {
+	width: 50%;
+}
+
+#footer > div > h3, #footer > div > h6 {
+	color: var(--cream);
+}
+
+@media (max-width: 1040px) {
+	.content > header > h1 {
+		font-size: 1.2rem;
+	}
+	.content > header > h2 {
+		font-size: 1.1rem;
+	}
+	.content > header > h2::after {
+		top: 70px;
+		left: 0;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.nav > a {
+		font-size: 1rem;
+	}
+
+	.container > .content > .circle {
+		border-radius: 0px;
+		transform: scaleY(1.5);
+	}
+
+	.content header img {
+		width: 180px;
+		height: 160px;
+	}
+
+	.content > #skills {
+		margin-top: 60px;
+		width: 100%;
+		border-radius: 0;
+	}
+}
+
+
